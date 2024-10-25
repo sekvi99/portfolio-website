@@ -1,11 +1,15 @@
-import './App.scss';
+import "./App.scss";
+import Cursor from "./components/cursor/cursor";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
   return (
     <div className="App">
-      XDDDDDDDDD
+      <div className="content">
+        TEsdfgkshjlgjkhrsdlkghjklshdrklghlksdhrlg
+      </div>
+      <Cursor />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,18 @@
+@import "../../styles/mixins.scss";
+
+$cursorSize: 30px;
+
+.cursor {
+    position: fixed;
+    width: $cursorSize;
+    height: $cursorSize;
+    border: 1px solid var(--primary-highlight-color);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.content:hover ~ .cursor {
+    transform: scale(1.5);
+    background-color: var(--primary-highlight-color);
+    opacity: .5;
+}
