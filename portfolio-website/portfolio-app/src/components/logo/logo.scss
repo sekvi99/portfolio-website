@@ -1,0 +1,30 @@
+$imageSize: 350px;
+
+.logo-container {
+
+    .logo-img {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        box-shadow: inset 0 0 0 9px rgb(255 101 0 / 30%);
+        order: 1;
+        justify-content: center;
+        width: $imageSize;
+        height: $imageSize;
+        animation: profile-animation 8s ease-in-out infinite 1s;
+      }
+}
+
+@keyframes profile-animation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}

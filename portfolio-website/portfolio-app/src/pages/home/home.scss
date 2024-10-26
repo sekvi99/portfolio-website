@@ -1,5 +1,32 @@
 @import "../../styles/mixins.scss";
 
-.hero-container {
+$heroContentLetterSpacing: 3px;
+
+.home-section {
   @include flexCenter;
+  gap: 2rem;
+
+  .hero-content-container {
+    p {
+      font-size: var(--normal-font-size);
+      letter-spacing: $heroContentLetterSpacing;
+    }
+
+    span {
+      letter-spacing: $heroContentLetterSpacing;
+      color: var(--primary-highlight-color);
+      display: flex;
+      gap: 1rem;
+      @include defaultTransition;
+
+      &:hover {
+        font-size: var(--h4-font-size);
+        cursor: pointer;
+      }
+    }
+
+    * {
+      margin-bottom: 1rem;
+    }
+  }
 }

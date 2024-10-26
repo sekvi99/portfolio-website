@@ -6,7 +6,7 @@ import Experience from "./pages/experience/Experience";
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <div className="App">
+    <div className="app">
       <Home />
       <Skills />
       <Experience />
