@@ -1,1 +1,5 @@
-div {}
+@import "../../styles/mixins.scss";
+
+.hero-container {
+  @include flexCenter;
+}
