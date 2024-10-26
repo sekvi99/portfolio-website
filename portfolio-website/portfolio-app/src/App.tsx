@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import Cursor from "./components/cursor/cursor";
 import Skills from "./pages/skills/Skills";
 import Experience from "./pages/experience/Experience";
+import PageIndicator from "./components/pageIndicator/pageIndicator";
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = (): JSX.Element => {
       <Skills />
       <Experience />
       <Cursor />
+      <PageIndicator />
     </div>
   );
 };
