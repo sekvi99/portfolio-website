@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+
+.loader-container {
+  @include defaultAbsolutePosition;
+  @include flexCenter;
+  @include fullScreenCover;
+  touch-action: none;
+  overflow: hidden;
+  z-index: var(--z-modal);
+  background-color: var(--primary-color-light);
+}
