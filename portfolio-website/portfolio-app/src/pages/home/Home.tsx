@@ -16,7 +16,7 @@ const Home: React.FC = (): JSX.Element => {
           <h1>{homeContent.heroSectionHeader}</h1>
           <p>{homeContent.heroSection}</p>
           <span>
-            {homeContent.getToKnowMeText} <FaLongArrowAltRight />
+            {homeContent.getToKnowMeText} <FaLongArrowAltRight className="contact-arrow" />
           </span>
         </div>
       </Reveal>

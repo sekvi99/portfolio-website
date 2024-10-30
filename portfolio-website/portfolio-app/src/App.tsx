@@ -22,11 +22,12 @@ const App: React.FC = (): JSX.Element => {
       setLoadingStatus(true);
     }, 1750);
   }, []);
-  
+
   return (
     <div className="app">
       <Router>
-      <AnimatePresence>{loadingStatus ? null : <Loader />}</AnimatePresence>
+        {/* TODO HANDLE Loader */}
+        {/* <AnimatePresence>{loadingStatus ? null : <Loader />}</AnimatePresence> */}
         <Cursor />
         <PageIndicator />
 

@@ -8,8 +8,8 @@
   --title-color-dark: #021526;
   --primary-color: #0b192c;
   --primary-color-light: #27005D;
-  --primary-highlight-color: #9400FF;
-  --header-text-color: #AED2FF;
+  --primary-highlight-color: #fbff00;
+  --header-text-color: #e3ffae;
   --text-color: #E4F1FF;
 
   /* Fonts and typography */
@@ -73,7 +73,8 @@ textarea {
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: transparent;
+  background-image: linear-gradient( 94.3deg,  rgb(7, 8, 14) 10.9%, rgba(81,84,115,1) 87.1% );
   color: var(--text-color);
 }
 

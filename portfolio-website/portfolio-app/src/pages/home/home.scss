@@ -17,11 +17,17 @@ $heroContentLetterSpacing: 3px;
       color: var(--primary-highlight-color);
       display: flex;
       gap: 1rem;
-      @include defaultTransition;
+
+      .contact-arrow {
+        @include defaultTransition;
+      }
 
       &:hover {
-        font-size: var(--h4-font-size);
         cursor: pointer;
+
+        .contact-arrow {
+          margin-left: var(--m-0-5);
+        }
       }
     }
 
