@@ -6,14 +6,14 @@
   --sat: 0%;
   --title-color: #03346E;
   --title-color-dark: #021526;
-  --primary-color: #0b192c;
-  --primary-color-light: #27005D;
+  --primary-color: #222831;
+  --primary-color-light: #393E46;
   --primary-highlight-color: #fbff00;
-  --header-text-color: #e3ffae;
-  --text-color: #E4F1FF;
+  --header-text-color: #E3FFAE;
+  --text-color: #EEE;
 
   /* Fonts and typography */
-  --body-font: "Roboto", sans-serif;
+  --body-font: "Jersey 10", sans-serif;
 
   /* Font sizes */
   --welcome-font-size: 6rem;
@@ -55,7 +55,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Jersey 10", sans-serif;
   box-sizing: border-box;
 }
 
@@ -70,11 +70,11 @@ input,
 textarea {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  font-style: normal;
 }
 
 body {
-  background-color: transparent;
-  background-image: linear-gradient( 94.3deg,  rgb(7, 8, 14) 10.9%, rgba(81,84,115,1) 87.1% );
+  background-color: var(--primary-color);
   color: var(--text-color);
 }
 
