@@ -5,6 +5,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import Reveal from "../../components/reveal/reveal";
 import Lottie from "lottie-react";
 import Coder from "../../assets/animations/home-animation.json";
+import Socials from "../../components/socials/socials";
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -29,6 +30,7 @@ const Home: React.FC = (): JSX.Element => {
           </Reveal>
         </div>
       </div>
+      <Socials />
     </div>
   );
 };

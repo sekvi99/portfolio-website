@@ -1,0 +1,31 @@
+@import "../../styles/mixins.scss";
+
+:root {
+    --social-size-default:  40px;
+    --social-size-mobile: 30px;
+}
+
+.socials-container {
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    top: 45%;
+    gap: 1rem;
+    
+
+    .social-link {
+        font-size: var(--social-size-default);
+        cursor: pointer;
+        color: inherit;
+        @include defaultTransition;
+
+        &:hover {
+            color: var(--header-text-color);
+        }
+
+        @include tablet {
+            font-size: var(--social-size-mobile);
+        }
+    }
+}
