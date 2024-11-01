@@ -2,6 +2,8 @@
 
 :root {
   --sections-gap: 3rem;
+  --arrow-gap: 0.5rem;
+  --arrow-gap-hover: 1.5rem;
 }
 
 .home-container {
@@ -16,6 +18,24 @@
     max-width: 50%;
     flex: 1;
 
+    span {
+      @include flexCenter;
+      gap: var(--arrow-gap);
+      color: var(--header-text-color);
+      font-size: var(--h1-font-size);
+      cursor: pointer;
+
+      .contact-arrow {
+        @include defaultTransition;
+      }
+
+      &:hover {
+        .contact-arrow {
+          margin-left: var(--arrow-gap-hover);
+        }
+      }
+    }
+
     #hero-text {
       color: var(--header-text-color);
       font-size: var(--welcome-font-size);
@@ -28,9 +48,36 @@
     #hero-content {
       font-size: var(--h4-font-size);
     }
+
+    @include tablet {
+      span {
+        font-size: var(--h4-font-size);
+      }
+
+      #hero-text {
+        font-size: var(--xxl-font-size);
+      }
+
+      #hero-title {
+        font-size: var(--h1-font-size);
+      }
+
+      #hero-content {
+        font-size: var(--normal-font-size);
+      }
+    }
   }
 
   .animation-container {
     min-width: 40%;
+  }
+
+  @include mobile {
+    flex-direction: column;
+
+    .hero-info-container,
+    .animation-container {
+      max-width: 80%;
+    }
   }
 }

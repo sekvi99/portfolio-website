@@ -12,7 +12,7 @@ const Home: React.FC = (): JSX.Element => {
       <div className="home-container">
         <div className="hero-info-container">
           <Reveal>
-            <div className="hero-content">
+            <div>
               <p id="hero-text">{homeContent.heroSectionHeader}</p>
               <p id="hero-title">{homeContent.heroSubHeader}</p>
               <p id="hero-content">{homeContent.heroSection}</p>
