@@ -1,0 +1,35 @@
+@import "../../../styles/mixins.scss";
+
+.navigation {
+  @include fullScreenCover;
+  @include flexCenter;
+  flex-direction: column;
+  position: fixed;
+  z-index: var(--z-base);
+  right: 0;
+  top: 0;
+  background-color: var(--primary-color-light);
+
+  .navigation-header {
+    font-size: var(--big-font-size);
+    border-bottom: 2px solid var(--header-text-color);
+    color: var(--text-color);
+  }
+
+  .links-container {
+    margin-top: 1rem;
+    @include flexCenter;
+    flex-direction: column;
+
+    .link {
+      color: inherit;
+      cursor: pointer;
+      font-size: var(--h1-font-size);
+      @include defaultTransition;
+
+      &:hover {
+        color: var(--header-text-color);
+      }
+    }
+  }
+}

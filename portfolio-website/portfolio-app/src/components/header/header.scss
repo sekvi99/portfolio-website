@@ -1,0 +1,70 @@
+@import "../../styles/mixins.scss";
+
+@mixin transformHamburger($degreeNumber, $topPixelAmount) {
+  transform: rotate($degreeNumber);
+  top: $topPixelAmount;
+}
+
+:root {
+  --menu-desktop-size: 60px;
+  --menu-mobile-size: 40px;
+}
+
+.header {
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  z-index: var(--z-tooltip);
+
+  .button {
+    width: var(--menu-desktop-size);
+    height: var(--menu-desktop-size);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    @include flexCenter;
+    @include defaultTransition;
+
+    @include mobile {
+      width: var(--menu-mobile-size);
+      height: var(--menu-mobile-size);
+    }
+
+    &:hover {
+        background-color: var(--title-color);
+    }
+  }
+
+  .burger {
+    width: 100%;
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 50%;
+      margin: auto;
+      background-color: var(--header-text-color);
+      position: relative;
+      @include defaultTransition;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .active-menu {
+    &::after {
+      @include transformHamburger(45deg, -1px);
+    }
+
+    &::before {
+      @include transformHamburger(-45deg, 0px);
+    }
+  }
+}

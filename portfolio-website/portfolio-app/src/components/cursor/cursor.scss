@@ -9,6 +9,7 @@ $cursorSize: 30px;
     border: 1px solid var(--primary-highlight-color);
     border-radius: 50%;
     pointer-events: none;
+    z-index: var(--z-tooltip);
 }
 
 .content:hover ~ .cursor {
