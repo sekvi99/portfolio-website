@@ -1,38 +1,36 @@
 @import "../../styles/mixins.scss";
 
-$heroContentLetterSpacing: 3px;
+:root {
+  --sections-gap: 3rem;
+}
 
-.home-section {
+.home-container {
+  @include fullPageCover;
   @include flexCenter;
-  gap: 2rem;
+  @include fullScreenCover;
+  gap: var(--sections-gap);
+  padding: var(--sections-gap);
 
-  .hero-content-container {
-    p {
-      font-size: var(--normal-font-size);
-      letter-spacing: $heroContentLetterSpacing;
+  .hero-info-container {
+    text-align: center;
+    max-width: 50%;
+    flex: 1;
+
+    #hero-text {
+      color: var(--header-text-color);
+      font-size: var(--welcome-font-size);
     }
 
-    span {
-      letter-spacing: $heroContentLetterSpacing;
-      color: var(--primary-highlight-color);
-      display: flex;
-      gap: 1rem;
-
-      .contact-arrow {
-        @include defaultTransition;
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        .contact-arrow {
-          margin-left: var(--m-0-5);
-        }
-      }
+    #hero-title {
+      font-size: var(--big-font-size);
     }
 
-    * {
-      margin-bottom: 1rem;
+    #hero-content {
+      font-size: var(--h4-font-size);
     }
+  }
+
+  .animation-container {
+    min-width: 40%;
   }
 }

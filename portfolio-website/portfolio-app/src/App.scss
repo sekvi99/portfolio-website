@@ -103,15 +103,3 @@ main {
   width: 100%;
   height: 100%;
 }
-
-.section {
-  height: 100vh;
-  width: 80%;
-  scroll-snap-align: center;
-  overflow: hidden;
-}
-
-.app {
-  @include flexCenter;
-  flex-direction: column;
-}

@@ -23,7 +23,7 @@ const revealEntryMotion: RevealMotion = {
 const revealExitMotion: RevealExitMotion = {
     variants: { hidden: { left: 0 }, visible: { left: "100%" } },
     initial: "hidden",
-    transition: { duration: 0.5, ease: "easeIn" },
+    transition: { duration: 0.7, ease: "easeIn" },
     style: {
         position: "absolute",
         top: 4,
