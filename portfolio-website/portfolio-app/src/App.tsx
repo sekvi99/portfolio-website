@@ -11,6 +11,8 @@ import Skills from "./pages/skills/Skills";
 import Experience from "./pages/experience/Experience";
 import Cursor from "./components/cursor/cursor";
 import Header from "./components/header/header";
+import { AnimatePresence } from "framer-motion";
+import Loader from "./components/loader/loader";
 
 const App: React.FC = (): JSX.Element => {
   const [loadingStatus, setLoadingStatus] = useState(false);
@@ -25,7 +27,7 @@ const App: React.FC = (): JSX.Element => {
     <div className="app">
       <Router>
         {/* TODO HANDLE Loader */}
-        {/* <AnimatePresence>{loadingStatus ? null : <Loader />}</AnimatePresence> */}
+        <AnimatePresence>{loadingStatus ? null : <Loader />}</AnimatePresence>
         <Cursor />
         <Header />
         <Routes>

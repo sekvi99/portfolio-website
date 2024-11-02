@@ -8,4 +8,9 @@
   overflow: hidden;
   z-index: var(--z-modal);
   background-color: var(--primary-color-light);
+
+  .loader-text {
+    font-size: var(--welcome-font-size);
+    color: var(--header-text-color);
+  }
 }

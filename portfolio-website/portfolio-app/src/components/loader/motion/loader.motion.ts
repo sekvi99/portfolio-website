@@ -30,7 +30,7 @@ const defaultLoaderVariant: Loader = {
 const defaultLoaderState: LoaderState = {
   initial: { y: 0, opacity: 1 },
   exit: { y: "100%", opactiy: 0 },
-  transition: { duration: 2 },
+  transition: { duration: 1.2 },
 };
 
 export default { defaultLoaderVariant, defaultLoaderState };
