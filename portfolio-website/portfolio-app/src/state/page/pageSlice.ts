@@ -1,12 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Pages } from "../../utils/enums/pages.enum";
 
-export interface PageState {
+interface PageState {
   selectedPage: string;
 }
 
+const getInitialPage = (): string => {
+  const path = window.location.pathname.replace("/", "");
+  return Object.values(Pages).includes(path as Pages) ? path : Pages.Home;
+};
+
 const initialState: PageState = {
-  selectedPage: Pages.Home,
+  selectedPage: getInitialPage(),
 };
 
 const pagesSlice = createSlice({
@@ -14,8 +19,8 @@ const pagesSlice = createSlice({
   initialState,
   reducers: {
     changePage: (state, action: PayloadAction<string>) => {
-        state.selectedPage = action.payload;
-      },
+      state.selectedPage = action.payload;
+    },
   },
 });
 

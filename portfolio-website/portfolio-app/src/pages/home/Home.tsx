@@ -26,7 +26,7 @@ const Home: React.FC = (): JSX.Element => {
         </div>
         <div className="animation-container">
           <Reveal>
-            <Lottie width={400} height={400} animationData={Coder} />
+            <Lottie animationData={Coder} />
           </Reveal>
         </div>
       </div>

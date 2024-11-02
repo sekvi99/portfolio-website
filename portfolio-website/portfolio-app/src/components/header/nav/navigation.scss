@@ -31,5 +31,9 @@
         color: var(--header-text-color);
       }
     }
+
+    .link-active {
+      border-bottom: 2px solid var(--header-text-color);
+    }
   }
 }
