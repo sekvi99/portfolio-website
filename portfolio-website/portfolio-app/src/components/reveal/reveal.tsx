@@ -5,12 +5,20 @@ import revealMotion from "./reveal.motion";
 export interface RevealProps {
   children: JSX.Element;
   width?: "fit-content" | "100%";
+  shouldReverseColors?: boolean;
 }
 
 // Credits to Tom Is Loading
 
-const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
+const Reveal = ({
+  children,
+  width = "fit-content",
+  shouldReverseColors = false,
+}: RevealProps) => {
   const { revealEntryMotion, revealExitMotion } = revealMotion;
+  shouldReverseColors
+    ? (revealExitMotion.style.background = "var(--title-color)")
+    : (revealExitMotion.style.background = "var(--primary-highlight-color)");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -39,8 +47,7 @@ const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
         animate={slideControls}
         transition={revealExitMotion.transition}
         style={revealExitMotion.style}
-      >
-      </motion.div>
+      ></motion.div>
     </div>
   );
 };
