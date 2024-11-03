@@ -1,0 +1,136 @@
+@import "../../styles/mixins.scss";
+
+footer {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+
+    @include tablet {
+        min-height: 250px;
+    }
+
+    @include mobile {
+        min-height: 200px;
+    }
+
+    .footer-content {
+        .footer-header-icon {
+            font-size: var(--h1-font-size);
+
+            @include tablet {
+                font-size: var(--h1-font-size);
+            }
+
+            @include mobile {
+                font-size: var(--h2-font-size);
+            }
+        }
+
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--header-text-color);
+        color: var(--primary-color);
+
+        .contact-section {
+            span {
+                @include flexCenter;
+                
+                @include mobile {
+                    gap: 0.25rem;
+                }
+            }
+
+            h1 {
+                color: var(--primary-color);
+                font-size: var(--big-font-size);
+                
+                @include tablet {
+                    font-size: var(--h1-font-size);
+                }
+
+                @include mobile {
+                    font-size: var(--h2-font-size);
+                }
+            }
+            
+            h2 {
+                color: var(--primary-color);
+                font-size: var(--h1-font-size);
+
+                @include tablet {
+                    font-size: var(--h2-font-size);
+                }
+
+                @include mobile {
+                    font-size: var(--normal-font-size);
+                }
+            }
+            
+        }
+
+        .find-me-section {
+            span {
+                @include flexCenter;
+                gap: 1rem;
+
+                @include mobile {
+                    gap: 0.25rem;
+                }
+
+                h1 {
+                    color: var(--primary-color);
+                    font-size: var(--big-font-size);
+
+                    @include tablet {
+                        font-size: var(--h1-font-size);
+                    }
+    
+                    @include mobile {
+                        font-size: var(--h2-font-size);
+                    }
+                }
+            }
+
+            .links-container {
+                @include flexCenter;
+                gap: 1rem;
+
+                .footer-icon {
+                    color: var(--primary-color);
+                    font-size: var(--h1-font-size);
+                    @include defaultTransition;
+
+                    @include tablet {
+                        font-size: var(--h2-font-size);
+                    }
+    
+                    @include mobile {
+                        font-size: var(--normal-font-size);
+                    }
+
+                    &:hover {
+                        color: var(--title-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-content {
+        color: var(--header-text-color);
+        
+        div {
+            @include flexCenter;
+            font-size: var(--xxl-font-size);
+
+            div {
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                font-size: var(--h2-font-size);
+            }
+        }
+    }
+}

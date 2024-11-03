@@ -13,6 +13,7 @@ import Cursor from "./components/cursor/cursor";
 import Header from "./components/header/header";
 import { AnimatePresence } from "framer-motion";
 import Loader from "./components/loader/loader";
+import Footer from "./components/footer/footer";
 
 const App: React.FC = (): JSX.Element => {
   const [loadingStatus, setLoadingStatus] = useState(false);
@@ -36,6 +37,7 @@ const App: React.FC = (): JSX.Element => {
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
