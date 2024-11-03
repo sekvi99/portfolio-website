@@ -10,6 +10,6 @@ export const homeContent: HomeContent = {
   heroSectionHeader: "sekvi",
   heroSubHeader: "Software Engineer and Full-stack Developer",
   heroSection:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+    "Hey! I'm Filip, I've been working commercially as a developer/software engineer for almost 3 years. In my work I use technologies such as .NET and Angular. In my free time, I also try to develop in technologies such as React and Python. When I'm not programming I like to play board and video games, watch TV series and play with my cat.",
   getToKnowMeText: "Get to know me"
 };
