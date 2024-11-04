@@ -1,1 +1,58 @@
-div {}
+@import "../../styles/mixins.scss";
+
+.experience-section {
+    @include fullPageCover;
+    @include fullScreenCover;
+    display: flex;
+    padding: 3rem;
+    gap: 3rem;
+
+    .header-experience {
+        color: var(--text-color);
+        font-size: var(--xxl-font-size);
+        letter-spacing: 2px;
+        @include tablet {}
+        @include mobile {}
+    }
+
+    .hero-container {
+        max-width: 45%;
+
+        @include tablet {}
+        @include mobile {}
+
+        .hero-information {
+            h2 {
+                font-size: var(--h1-font-size);
+                color: var(--text-color);
+            }
+
+            h3 {
+                font-size: var(--h4-font-size);
+                color: var(--text-color);
+            }
+            .socials-experience-container {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                a {
+                    color: inherit;
+                    font-size: var(--h1-font-size);
+                    @include defaultTransition;
+
+                    &:hover {
+                        color: var(--header-text-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .experience-container {
+        max-width: 45%;
+
+        @include tablet {}
+        @include mobile {}
+    }
+}
