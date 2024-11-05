@@ -7,13 +7,21 @@
   padding: 3rem;
   gap: 3rem;
 
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    gap: 1rem;
+  }
+
   .header-experience {
     color: var(--text-color);
     font-size: var(--xxl-font-size);
     letter-spacing: 2px;
-    @include tablet {
-    }
+
     @include mobile {
+        font-size: var(--big-font-size);
     }
   }
 
@@ -21,19 +29,20 @@
     max-width: 45%;
 
     @include tablet {
-    }
-    @include mobile {
+        max-width: 100%;
     }
 
     .hero-information {
       h2 {
         font-size: var(--h1-font-size);
-        color: var(--text-color);
+        color: var(--header-text-color);
+        letter-spacing: 1px;
       }
 
       h3 {
         font-size: var(--h4-font-size);
         color: var(--text-color);
+        letter-spacing: 1px;
       }
       .socials-experience-container {
         display: flex;
@@ -58,7 +67,6 @@
 
     max-height: 850px;
     overflow-y: auto;
-    padding-right: 10px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -67,8 +75,8 @@
     scrollbar-width: none;
 
     @include tablet {
-    }
-    @include mobile {
+        max-width: 100%;
+        overflow-y: inherit;
     }
   }
 }

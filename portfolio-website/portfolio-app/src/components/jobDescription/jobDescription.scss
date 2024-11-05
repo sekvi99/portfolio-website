@@ -10,6 +10,11 @@
   @include defaultTransition;
   border-radius: 3rem;
 
+  @include mobile {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+
   &:hover {
     border: 2px solid var(--primary-highlight-color);
     background-color: rgba(227, 255, 174, 0.1);
@@ -18,6 +23,11 @@
   .date-container {
     display: block;
     min-width: 100px;
+
+    @include mobile {
+        min-width: 50px;
+        font-size: var(--tiny-font-size);
+    }
   }
 
   .job-info-container {
@@ -26,8 +36,15 @@
     gap: 1rem;
 
     .job-info-content-container {
+        h1 {
+            @include mobile {
+                font-size: var(--h2-font-size);
+            }
+        }
+
         h4 {
             letter-spacing: 1px;
+            font-size: var(--smaller-font-size);
         }
     }
 
@@ -40,6 +57,11 @@
         color: var(--primary-color);
         padding: 0.15rem;
         border-radius: 10%;
+
+        @include mobile {
+          font-size: var(--smaller-font-size);
+          padding: 0.05rem;
+        }
       }
     }
   }
