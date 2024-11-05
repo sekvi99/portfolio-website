@@ -2,25 +2,25 @@
 
 footer {
   width: 100%;
-  height: 300px;
+  height: 180px;
   position: relative;
 
   .footer-child {
     position: fixed;
-    height: 300px;
+    height: 180px;
     width: 100%;
     bottom: 0;
 
     .footer-content {
       .footer-header-icon {
-        font-size: var(--h1-font-size);
+        font-size: var(--h4-font-size);
 
         @include tablet {
-          font-size: var(--h1-font-size);
+          font-size: var(--normal-font-size);
         }
 
         @include mobile {
-          font-size: var(--h2-font-size);
+          font-size: var(--small-font-size);
         }
       }
 
@@ -34,35 +34,32 @@ footer {
       .contact-section {
         span {
           @include flexCenter;
-
-          @include mobile {
-            gap: 0.25rem;
-          }
+          gap: 0.25rem;
         }
 
         h1 {
           color: var(--primary-color);
-          font-size: var(--big-font-size);
+          font-size: var(--h4-font-size);
 
           @include tablet {
-            font-size: var(--h1-font-size);
+            font-size: var(--normal-font-size);
           }
 
           @include mobile {
-            font-size: var(--h2-font-size);
+            font-size: var(--small-font-size);
           }
         }
 
         h2 {
           color: var(--primary-color);
-          font-size: var(--h1-font-size);
+          font-size: var(--normal-font-size);
 
           @include tablet {
-            font-size: var(--h2-font-size);
+            font-size: var(--small-font-size);
           }
 
           @include mobile {
-            font-size: var(--normal-font-size);
+            font-size: var(--smaller-font-size);
           }
         }
       }
@@ -70,22 +67,18 @@ footer {
       .find-me-section {
         span {
           @include flexCenter;
-          gap: 1rem;
-
-          @include mobile {
-            gap: 0.25rem;
-          }
+          gap: 0.25rem;
 
           h1 {
             color: var(--primary-color);
-            font-size: var(--big-font-size);
+            font-size: var(--h4-font-size);
 
             @include tablet {
-              font-size: var(--h1-font-size);
+              font-size: var(--normal-font-size);
             }
 
             @include mobile {
-              font-size: var(--h2-font-size);
+              font-size: var(--small-font-size);
             }
           }
         }
@@ -96,15 +89,15 @@ footer {
 
           .footer-icon {
             color: var(--primary-color);
-            font-size: var(--h1-font-size);
+            font-size: var(--normal-font-size);
             @include defaultTransition;
 
             @include tablet {
-              font-size: var(--h2-font-size);
+              font-size: var(--small-font-size);
             }
 
             @include mobile {
-              font-size: var(--normal-font-size);
+              font-size: var(--smaller-font-size);
             }
 
             &:hover {
@@ -120,23 +113,15 @@ footer {
 
       div {
         @include flexCenter;
-        font-size: var(--xxl-font-size);
+        font-size: var(--normal-font-size);
 
         div {
           margin-left: 1rem;
           display: flex;
           flex-direction: column;
-          font-size: var(--h2-font-size);
+          font-size: var(--tiny-font-size);
         }
       }
     }
-  }
-
-  @include tablet {
-    min-height: 250px;
-  }
-
-  @include mobile {
-    min-height: 200px;
   }
 }

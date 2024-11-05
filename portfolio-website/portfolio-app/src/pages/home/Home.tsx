@@ -17,10 +17,10 @@ const Home: React.FC = (): JSX.Element => {
               <p id="hero-text">{homeContent.heroSectionHeader}</p>
               <p id="hero-title">{homeContent.heroSubHeader}</p>
               <p id="hero-content">{homeContent.heroSection}</p>
-              <span>
+              <a href="/Experience">
                 {homeContent.getToKnowMeText}{" "}
                 <FaLongArrowAltRight className="contact-arrow" />
-              </span>
+              </a>
             </div>
           </Reveal>
         </div>

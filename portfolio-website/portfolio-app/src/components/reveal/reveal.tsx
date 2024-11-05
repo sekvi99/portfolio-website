@@ -17,7 +17,7 @@ const Reveal = ({
 }: RevealProps) => {
   const { revealEntryMotion, revealExitMotion } = revealMotion;
   shouldReverseColors
-    ? (revealExitMotion.style.background = "var(--title-color)")
+    ? (revealExitMotion.style.background = "var(--primary-color-light)")
     : (revealExitMotion.style.background = "var(--primary-highlight-color)");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });

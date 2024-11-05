@@ -19,7 +19,7 @@
     max-width: 50%;
     flex: 1;
 
-    span {
+    a {
       @include flexCenter;
       gap: var(--arrow-gap);
       color: var(--header-text-color);

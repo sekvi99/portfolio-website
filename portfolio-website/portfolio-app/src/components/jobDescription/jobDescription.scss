@@ -9,6 +9,7 @@
   margin-bottom: 1rem;
   @include defaultTransition;
   border-radius: 3rem;
+  border: 2px solid var(--primary-color);
 
   @include mobile {
     padding: 0.5rem;
@@ -51,16 +52,26 @@
     .tech-container {
       display: flex;
       gap: 0.25rem;
+      flex-wrap: wrap;
+
 
       .tech-badge {
-        background-color: var(--header-text-color);
-        color: var(--primary-color);
-        padding: 0.15rem;
+        background: linear-gradient(135deg, rgba(227, 255, 174, 0.1), rgba(227, 255, 174, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: var(--primary-highlight-color);
+        box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+        padding: 0.4rem;
         border-radius: 10%;
+        @include flexCenter;
+
+        @include tablet {
+          font-size: var(--small-font-size);
+        }
 
         @include mobile {
           font-size: var(--smaller-font-size);
-          padding: 0.05rem;
+          padding: 0.15rem;
         }
       }
     }
