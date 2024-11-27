@@ -2,12 +2,13 @@
 
 footer {
   width: 100%;
-  height: 180px;
+  height: 100px;
   position: relative;
+  background-color: var(--header-text-color);
 
   .footer-child {
     position: fixed;
-    height: 180px;
+    height: 100px;
     width: 100%;
     bottom: 0;
 
@@ -24,102 +25,43 @@ footer {
         }
       }
 
-      padding: 3rem;
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
-      background-color: var(--header-text-color);
-      color: var(--primary-color);
+      padding-top: 2rem;
 
-      .contact-section {
-        span {
-          @include flexCenter;
-          gap: 0.25rem;
+      h1 {
+        color: var(--primary-color);
+
+        @include tablet {
+          font-size: var(--h2-font-size);
         }
 
-        h1 {
-          color: var(--primary-color);
+        @include mobile {
           font-size: var(--h4-font-size);
-
-          @include tablet {
-            font-size: var(--normal-font-size);
-          }
-
-          @include mobile {
-            font-size: var(--small-font-size);
-          }
-        }
-
-        h2 {
-          color: var(--primary-color);
-          font-size: var(--normal-font-size);
-
-          @include tablet {
-            font-size: var(--small-font-size);
-          }
-
-          @include mobile {
-            font-size: var(--smaller-font-size);
-          }
         }
       }
 
-      .find-me-section {
-        span {
-          @include flexCenter;
-          gap: 0.25rem;
-
-          h1 {
-            color: var(--primary-color);
-            font-size: var(--h4-font-size);
-
-            @include tablet {
-              font-size: var(--normal-font-size);
-            }
-
-            @include mobile {
-              font-size: var(--small-font-size);
-            }
-          }
-        }
-
-        .links-container {
-          @include flexCenter;
-          gap: 1rem;
-
-          .footer-icon {
-            color: var(--primary-color);
-            font-size: var(--normal-font-size);
-            @include defaultTransition;
-
-            @include tablet {
-              font-size: var(--small-font-size);
-            }
-
-            @include mobile {
-              font-size: var(--smaller-font-size);
-            }
-
-            &:hover {
-              color: var(--title-color);
-            }
-          }
-        }
-      }
-    }
-
-    .copyright-content {
-      color: var(--header-text-color);
-
-      div {
+      .links-container {
         @include flexCenter;
-        font-size: var(--normal-font-size);
+        font-size: var(--h2-font-size);
+        color: var(--primary-color);
+        gap: 1rem;
 
-        div {
-          margin-left: 1rem;
-          display: flex;
-          flex-direction: column;
-          font-size: var(--tiny-font-size);
+        @include tablet {
+          font-size: var(--h2-font-size);
+        }
+
+        @include mobile {
+          font-size: var(--h4-font-size);
+        }
+
+        a {
+          color: var(--primary-color);
+          @include defaultTransition;
+
+          &:hover {
+            transform: scale(125%);
+          }
         }
       }
     }

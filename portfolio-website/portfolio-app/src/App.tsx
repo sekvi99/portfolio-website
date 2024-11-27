@@ -26,7 +26,6 @@ const App: React.FC = (): JSX.Element => {
   return (
     <div className="app">
       <Router>
-        {/* TODO HANDLE Loader */}
         <AnimatePresence>{loadingStatus ? null : <Loader />}</AnimatePresence>
         <Cursor />
         <Header />
