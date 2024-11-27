@@ -1,1 +1,1 @@
-export const PAGES: Array<string> = ["Home", "Experience", "Skills"];
+export const PAGES: Array<string> = ["Home", "Experience"];
